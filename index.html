@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" type="text/css" href="./assets/CSS/style.css">-->
+        <title>TASK 6 UPDATED</title>
+        <style>
+            body {
+                background-color: #000;
+                font-family:Arial, Helvetica, sans-serif;
+                
+                
+            }
+            .container1 {
+                width: 800px;
+                height: 30px;
+                margin: 0px auto;
+                padding: 0px;
+                background-color: white;
+                font-weight: bold;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                background-color: white;
+                font-size: small;
+            }
+            .logo img {
+                width: 100px;
+            }
+            nav ul {
+                display: flex;
+                list-style-type: none;
+                
+            }
+            nav li {
+                padding: 0 10px;
+            }
+            nav li:first-child {
+                margin-left: 0;
+            }
+            nav a {
+                text-decoration: none;
+                color: #333;
+            }
+            nav :hover {
+                color: #333;
+            }
+            .hamburger {
+                    display: none;
+                }
+            .hamburger img {
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+                
+            }
+            @media (max-width: 600px) {
+                .logo img {
+                    width:  50px;
+                }
+                nav li {
+                    margin-left: 10px;
+                    padding: 10px;
+                    
+                }
+                nav {
+                    text-align: center;
+                }
+                header {
+                    background-color: powderblue;
+                    padding: 30px;
+                }
+                .con {
+                    display: flex;
+                    flex-direction: column-reverse; 
+                    padding: 50px;  
+                    align-items: center;
+                }     
+                .image {
+                    padding: 5px;
+                }
+                }
+                @media screen and (max-width: 767px) {
+                    .hamburger {
+                       display: block;
+                } 
+                nav ul {
+                display: none;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            nav li {
+                display: none;
+                margin-left: 20px;
+            }
+        }
+           
+                    
+            
+              
+            .active {
+                color: darkcyan;
+            }
+            
+            .menu-item {
+                position: relative;
+                display: inline-block;
+            }
+            .menu-item  .dropdown-arrow {
+                position: absolute;
+                top: 5%;
+                right: 0;
+                transform:translate(80%);
+                margin-right: 10px;
+                
+            }
+            .menu-item .dropdown-arrow {
+                font-size: 0,8em;
+                color: #000;
+            }
+            button {
+                position: relative;
+                padding: 8px;
+                background-color: darkcyan;
+                border: 1px;
+                color: white;
+                min-width: 10px;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: all 0.4s;
+                
+            }
+            button:hover {
+                background-color: black;
+                color: white;
+
+            }
+            button::after {
+                content:'';
+                position: absolute;
+                width: 10px;
+                height:auto;
+                top: 40%;
+                right: 0;
+                border-top: 5px solid transparent;
+                border-left: 5px solid #fff;
+                border-bottom: 5px solid transparent;
+                transform: translate(50%, 50%);
+            }
+            .container2 {
+                width: 800px;
+                height: auto;
+                margin: 60px auto;
+                padding: 0px;
+                background-image: url(./Images/bg.png);
+                background-repeat: no-repeat;
+                background-size:contain;
+            } 
+            .container3 {
+                width: 800px;
+                height: auto;
+                margin:1px;
+                padding: 0px;
+                background-color: #fff;
+            }  
+            .block1 {
+                display: inline-block;
+                padding: 1px; margin: 5px;
+                background-color: powderblue;
+                border: 0;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .block2 {
+                display: inline-block;
+                padding: 1px;margin: 5px;
+                background-color: powderblue;
+                border: 0;
+                margin-right: 10px;
+            }
+            .block3 {
+                display: inline-block;
+                padding: 1px;margin: 5px;
+                background-color: powderblue;
+                border: 0;
+                margin-right: 10px;
+            }
+            .block4 {
+                display: inline-block;
+                padding: 1px;
+                margin: 5px;
+                background-color: powderblue;
+                border: 0;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+            .block1 .block2 .block3 .block4 img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .heading {
+                padding: 20px;
+            }
+            .box-1 {
+                display: inline-block;
+                padding: 10px;
+                background-color: darkcyan;
+                border: 0;
+                margin-left: 50px ;
+                
+            }
+            .box-2 {
+                display: inline-block;
+                padding: 10px;
+                background-color: #fff;
+                border: 0;
+                margin-left: 10px;
+            }  
+            .container4{
+                width: 800px;
+                height: auto;
+                margin:1px;
+                padding: 0px;
+                background-color:#fff;
+            } 
+            .con {
+                 display: flex;
+                 justify-content: space-between;
+                 text-align: center;
+                 max-width: 700px;
+                 margin: 0;
+                 height: 20%;
+                 position:relative ;
+            }
+            .des {
+                 width: 50%;
+                text-align: center;
+                height: auto;
+                margin: 0px;  
+            }
+            .image {
+                 width:50%;
+                 margin: 0px;
+            }
+             image img {
+                 max-width: 90%; 
+                 height: auto;
+                 margin: 0px;
+                 display: block;
+          }
+          
+          .container5{
+            width: 800px;
+            height: auto;
+            margin:1px;
+            padding: 0px;
+            background-color: white;
+          }
+          .main {
+            display: flex;
+            height: 300px;
+            width: 700px;
+            padding: 50px;
+            
+          }
+          .sec-left {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                margin : 4px;
+               
+          }
+          .sec-right {
+                width: 40%;
+                background-image: url(./Images/i4.jpeg);
+                background-position:center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin : 4px;
+                
+          }
+          .sec-left_top {
+            background-image: url(./Images/we.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 60%;
+            margin: 4px;
+           
+          }
+          .sec-left_bottom {
+            height: 50%;
+            display: flex;
+            margin: 4px;
+            
+          }
+          .sec-left_bottom-left {
+            background-image: url(./Images/i2.1.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;height: 100%;
+            margin: 4px;
+          }
+          .sec-left_bottom-right {
+            background-image: url(./Images/i3.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%; height: 100%;
+            margin: 4px;
+              
+          }
+          .sec1 {
+            display: inline-block;
+                padding: 0px;
+                background-color: #fff;
+                font-size: xx-small;
+                font-weight: bold;
+                border: 1px;
+                margin-top: 85px;
+                margin-left: 320px;
+                width: 80px;
+                height: 40px;
+                text-align: center;
+          }
+          .sec2 {
+            background-color: #fff;
+            font-size: xx-small;
+            font-weight: bold;
+            border: 1px;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            margin-top: 90px;
+            margin-left: 110px;
+          }
+          .sec3 {
+            background-color: #fff;
+            font-size: xx-small;
+            font-weight: bold;
+            border: 1px;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 110px;
+          }
+          .sec4 {
+            background-color: #fff;
+            font-size: xx-small;
+            font-weight: bold;
+            border: 1px;
+            width: 80px;
+            height: 40px;
+           text-align: center;
+            margin-top: 250px;
+            margin-left: 190px;
+          }
+          
+          .container6{
+            width: 800px;
+            height: 400px;
+            margin:0px;
+            padding: 1px;
+            background-color: white; 
+            
+          } 
+          .c1 {
+            display: inline-block;
+                width: 100px; height: auto;
+                padding: 50px;
+                margin: 5px;
+                background-image: url(./Images/t1.jpg);
+                background-color: powderblue;
+                background-size: contain;
+                background-repeat: no-repeat;
+                border: 0;
+                margin-right: 10px;
+                margin-left: 70px;
+               
+          }
+          .c2{
+            display: inline-block;
+                width: 100px; height:auto;
+                padding: 50px;
+                margin: 5px;
+                background-image: url(./Images/t1.jpg);
+                background-color: powderblue;
+                background-size: contain;
+                background-repeat: no-repeat;
+                border: 0;
+                margin-right: 10px;
+                margin-left: 10px;
+                
+          }
+          .c3{
+                display: inline-block;
+                width: 100px; height: auto;
+                padding: 50px;
+                margin: 5px;
+                background-image: url(./Images/t1.jpg);
+                background-color: powderblue;
+                background-size:contain;
+                background-repeat: no-repeat;
+                border: 0;
+                margin-right: 50px;
+                margin-left: 10px;
+                
+          }
+          .paragrapgh {
+            display: inline-block;
+            font-size:x-small;
+            font-weight: bold;
+            border: 1px;
+            width: 80px;
+            height: 40px;
+           text-align: center;
+           margin-top: 80px;
+          }
+          .container7 {
+            width: 800px;
+            height: 400px;
+            margin:-1px;
+            padding:1px;
+            background-color:white; 
+          }
+          .pc1 {
+                display: inline-block;
+                width: 100px; height: auto;
+                padding: 50px;
+                margin: 5px;
+                background-image: url(./Images/web.jpg);
+                background-color: powderblue;
+                background-size:contain;
+                background-repeat: no-repeat;
+                border: 0;
+                margin-right: 20px;
+                margin-left: 40px;
+                
+                
+          }
+          .pc1_1 {
+            text-align: center;
+          }
+          .pc2{
+                display: inline-block;
+                width: 100px; height: auto;
+                padding: 50px;
+                margin: 5px;
+                background-image: url(./Images/vis.jpg);
+                background-color: powderblue;
+                background-size:contain;
+                background-repeat: no-repeat;
+                border: 0;
+                margin-right: 50px;
+                margin-left: 40px; 
+                    
+          }
+          .pc2_2 {
+            text-align: center;
+          }
+          .pc3{
+                display: inline-block;
+                width: 100px; height: auto;
+                padding: 50px;
+                margin: 5px;
+                background-image: url(./Images/re.jpg);
+                background-color: powderblue;
+                background-size:contain;
+                background-repeat: no-repeat;
+                border: 0;
+                margin-right: 30px;
+                margin-left: 10px;  
+          }
+          .pc3_3 {
+            text-align: center;
+          }
+          
+          .container8 {
+            width: 800px;
+            height: 450px;
+            margin:-1px;
+            padding:1px;
+            background-color: #fff; 
+          }
+          .t1 {
+            display: inline-block;
+                width: 150px; height: 100px;
+                padding: 50px;
+                margin: 5px;
+                background-color:rgb(205, 225, 235);
+                border: 0;
+                margin-right: 10px;
+                margin-left: 10px; 
+          }
+          .t1_1 {
+            display: inline-block;
+            width: 250px; height: 80px;
+            background-color: rgb(164, 211, 235);
+            margin-top: 5px;
+            margin-left: -50px;
+            font-size: smaller;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            
+            
+          }
+          .t2 {
+            display: inline-block;
+                width: 150px; height: 100px;
+                padding: 50px;
+                margin: 5px;
+                background-color: rgb(205, 225, 235);
+                border: 0;
+                margin-right: 5px;
+                margin-left: 1px;    
+          }
+          .t2_2 {
+            display: inline-block;
+            width: 250px; height: 80px;
+            background-color: darkcyan;
+            color: #fff;
+            margin-top: 5px;
+            margin-left: -50px;
+            font-size: smaller;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+          }
+          .t3 {
+            display: inline-block;
+                width: 150px; height: 100px;
+                padding: 50px;
+                margin: 5px;
+                background-color: rgb(205, 225, 235);
+                border: 0;
+                margin-right: 10px;
+                margin-left: 1px; 
+                 
+          }
+          .t3_3 {
+            display: inline-block;
+            width: 250px; height: 80px;
+            background-color: rgb(164, 211, 235);
+            margin-top: 5px;
+            margin-left: -50px;
+            font-size:smaller;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+          }
+          .tmain {
+            display: inline-block;
+            width: 70px; height: 10px;
+            margin: 20px;
+            margin-left: 380px;
+            
+          }
+          .ta {
+            display: inline-block;
+            width: 10px; height: 10px;
+            border: 20px;
+            background-color: aliceblue;
+          }
+          .tb {
+            display: inline-block;
+            width: 10px; height: 10px;
+            border: 2px;
+         
+            background-color:aliceblue;
+          }
+          .tc {
+            display: inline-block;
+            width: 10px; height: 10px;
+            border: 2px;
+            background-color: darkcyan;
+          }
+          .td {
+            display: inline-block;
+            width: 10px; height: 10px;
+            border: 2px;
+            
+            background-color:aliceblue;
+          }
+
+          .container9 {
+            display: inline-block;
+            width: 800px;
+            height: 300px;
+            margin:-1px;
+            padding:1px;
+            background-color:rgb(2, 2, 27); 
+            font-size: smaller;
+          }
+          
+          .b1 {
+            
+                display: inline-block;
+                width: 150px; height: 200px;
+                padding: 5px;
+                margin: 5px;
+                background-color: rgb(2, 2, 27);
+                border: 0;
+                margin-right: 5px;
+                margin-left: 1px;    
+            }
+            .b2 {
+                display: inline-block;
+                width: 150px; height: 200px;
+                padding: 5px;
+                margin: 5px;
+                background-color: rgb(2, 2, 27);
+                border: 0;
+                margin-right: 5px;
+                margin-left: 1px;  
+            }
+            .b3 {
+                display: inline-block;
+                width: 148px; height: 224px;
+                padding: 5px;
+                margin: 5px;
+                background-color: rgb(2, 2, 27);
+                border: 0;
+                margin-right: 5px;
+                margin-left: 1px;  
+            }
+            .b4 {
+                display: inline-block;
+                width: 205px; height: 160px;
+                padding: 39px;
+                margin: 0px;
+                background-color: rgb(2, 2, 27);
+                border: 0;
+                margin-right: 5px;
+                margin-left: 1px;  
+            }
+            .search-container {
+             display: flex;
+             align-items: center;
+           background-color: #ffffff;
+             width: 180px;
+             height: 2px;
+             padding: 20px;
+             
+             
+          }
+          .search-bar {
+             padding: 10px;
+             width: 100px;
+             box-sizing: border-box;
+             justify-items: center;
+             vertical-align: top;
+             border: 0px;
+          }
+         .search-button {
+            width: 80px; 
+             padding: 10px;
+             margin: 1px;
+             position: relative;
+             background-color: darkcyan;
+             
+         }
+            
+            
+        </style>
+        </head>
+        <body>
+             <div class="container1">
+                <header>
+                    <div class="logo"> 
+                        <img src="./Images/lg.jpg" alt="lg"> </div>
+                        <nav>
+                            <div class="hamburger">
+                                <img src="./Images/hamburger.png" alt="hamburger">
+                            </div>
+                            <ul>
+                                <li><a href="#" class="active">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Courses</a></li>
+                                <li class="menu-item">
+                                    <span style="cursor: pointer; ">Pages</span>
+                                    <div class="dropdown-arrow">&#x25BE;</div>
+                                <li><a href="#">Contact</a></li>
+                                <li><button style="display: inline-block; margin: -30px; padding: 38px; margin-left: 20px;">Join Now</button></li>
+                            </ul>
+                        </nav> 
+                </header>
+             </div>
+             <div class="container2">
+                <div class="heading">
+                    <h6 style="color: darkcyan;">BEST ONLINE COURSES</h6>
+                    <h1>The Best Online<br>Learning Platform</h1>
+                    <p style="color:#000;">There are many variations of passages of torem Ipsum available,<br> but the majority have suffered alteration.</p>
+                 </div> 
+                 <div class="box-1">
+                     <input type="button" value="Read More" style="background-color: darkcyan; color: #fff; border: 1px ; cursor: pointer;"> 
+                 </div>
+                 <div class="box-2">
+                    <input type="button" value="Join Now" style="background-color: #fff; border: 1px; cursor:pointer;">  
+                 </div>
+                 <div class="container3">
+                    <div class="block1">
+                        <p style="text-align: start;"><img src="./Images/ca.png" alt="cap" width="40px" style="border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: 70px">
+                        <h5 style="text-align: center;">Skilled Instuctors</h5>This is a dummy content<br>this is a dummy contents
+                        </p>
+
+                    </div>
+                    <div class="block2">
+                        <p style="text-align: start;"><img src="./Images/net.jpg" alt="net" width="30px" style="border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: 70px">
+                            <h5 style="text-align: center";>Online Classes</h5>This is a dummy content<br>this is a dummy contents
+                            </p>
+                    </div>
+                    <div class="block3">
+                        <p style="text-align: start;"><img src="./Images/hom.png" alt="hom" width="30px" style="border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: 70px">
+                            <h5 style="text-align: center";>Home project</h5>This is a dummy content<br>this is a dummy contents
+                            </p>
+
+                    </div>
+                    <div class="block4">
+                        <p style="text-align: start;"><img src="./Images/bok.png" alt="bok" width="30px" style="border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: 70px">
+                            <h5 style="text-align: center";>Book Library</h5>This is a dummy content<br>this is a dummy contents
+                            </p>
+                        
+                    </div>
+                    <div class="container4">
+                        <div class="con">
+                            <div class="image">
+                                <img src="./Images/ele.jpg" alt="ele" width="300px" height="300px">
+                            </div>
+                        <div class="des">
+                            <h5 style="text-align: center; color: darkcyan;">ABOUT US</h5>
+                            <h2 style="text-align: center;  font-weight: bold;" >Welcome to e-Learning</h2>
+                            <p style="text-align:justify;">There are many variations of passages of torem<br> Ipsum available, but the majority have <br> suffered alteration There are many variations of <br>passages of Lorem Ipsum available,but the <br>majority have suffered alteration<br><br>
+                            </p>
+                            <div class="card">
+                            <ul>
+                                <li type="none">&rarr;  Skilled Instructors</li>
+                                <li type="none">&rarr;  Online Classes</li>
+                                <li type="none">&rarr;  International Certificates</li>
+                                <li type="none">&rarr;  Skilled Instructors</li>
+                                <li type="none">&rarr;  Online Classes</li>
+                                <li type="none">&rarr;  International Certificates</li>
+                               </ul></div>
+                                <input type="button" value="Read More" style="background-color:darkcyan; color: #fff; padding: 10px; border:1px; cursor: pointer;" ;>
+                        </div>
+                        
+                       </div>
+                       <div class="container5">
+                        <h5 style="color: darkcyan; text-align: center;">CATEGORIES</h5>
+                        <h3 style="text-align: center;">Courses categories</h3>
+                        <div class="main">  
+                        <div class="sec-left">
+                            <div class="sec-left_top">
+                                <div class="sec1">
+                                    <p>Web Design</p><p style="color: darkcyan;">49 Courses</p>
+                                </div>
+                            </div>
+                            <div class="sec-left_bottom">
+                                <div class="sec-left_bottom-left">
+                                    <div class="sec2">
+                                        <p>Graphic Design</p><p style="color: darkcyan;">49 Courses</p>
+                                    </div>
+                                </div>
+                                <div class="sec-left_bottom-right">
+                                    <div class="sec3">
+                                        <p>Video Editing</p><p style="color: darkcyan;">49 Courses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                          <div class="sec-right">
+                            <div class="sec4">
+                                <p>Online Marketing</p><p style="color: darkcyan;">49 Courses</p>
+                            </div>
+                          </div>
+                        </div></div>
+                        <div class="container6">
+                            <h5 style="color: darkcyan; text-align: center;">INSTUCTORS</h5>
+                            <h3 style="text-align: center;">Expert Instructors</h3>
+                             <div class="c1">
+                              <div class="paragrapgh">
+                               <p><img src="./Images/f.png" alt="f" width="20px"> <img src="./Images/insta.png" alt="insta" width="20px"> <img src="./Images/tw.png" alt="tw" width="20px"></p>
+                                 <p>Name<br>
+                                 Designation</p>
+                              </div>  
+                            </div>
+                             <div class="c2">
+                                <div class="paragrapgh">
+                                    <p><img src="./Images/f.png" alt="f" width="20px"> <img src="./Images/insta.png" alt="insta" width="20px"> <img src="./Images/tw.png" alt="tw" width="20px"></p>
+                                    <p>Name<br>
+                                    Designation</p>
+                                 </div>
+                             </div>
+                             <div class="c3">
+                                <div class="paragrapgh">
+                                    <p><img src="./Images/f.png" alt="f" width="20px"> <img src="./Images/insta.png" alt="insta" width="20px"> <img src="./Images/tw.png" alt="tw" width="20px"></p>
+                                    <p>Name<br>
+                                    Designation</p>
+                                 </div>
+                             </div>
+                        </div>
+                        <div class="container7">
+                            <h5 style="color: darkcyan; text-align: center;">COURSES</h5>
+                            <h3 style="text-align: center;">Popular Courses</h3>
+                            <div class="pc1">
+                                <div class="pc1_1">
+                                  <input type="button" value="Join Now  |  Read More" style="background-color: darkcyan; color: #fff; border-radius: 20px;width: 130px; height: 30px; font-size: x-small; border: 0; margin-top: 75px; cursor: pointer;">
+                                <div class="paragrapgh" style="margin-top: 5px;">
+                                   <p>$149.00<br>
+                                    Web development</p>
+                                 </div>
+                             </div></div>
+                             <div class="pc2">
+                                <div class="pc2_2">
+                               <input type="button" value="Join Now  |  Read More" style="background-color: darkcyan; color: #fff; border-radius: 20px;width: 130px; height: 30px; font-size: x-small; border: 0; margin-top: 75px; cursor: pointer;">
+                                <div class="paragrapgh" style="margin-top: 5px;">
+                                   <p>$149.00<br>
+                                    Visual Basic</p>
+                                 </div></div>
+                             </div>
+                             <div class="pc3">
+                                <div class="pc3_3">
+                               <input type="button" value="Join Now  |  Read More" style="background-color: darkcyan; color: #fff; border-radius: 20px;width: 130px; height: 30px; font-size: x-small; border: 0; margin-top: 75px; cursor: pointer;">
+                                <div class="paragrapgh" style="margin-top: 5px;">
+                                    <p>$149.00<br>
+                                    React.JS</p>
+                                 </div></div>
+                             </div>
+                         <div class="container8">
+                            <h5 style="color: darkcyan; text-align: center;">TESTIMONIAL</h5>
+                            <h3 style="text-align: center;">Our Students Say</h3>
+                            <div class="t1">
+                                <img src="./Images/s1.jpg" alt="s1" width="50px" style="border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: 50px; margin-top: -40px;" >
+                                <p style="text-align: center; font-size: smaller;">Client Name <br>Profession</p>
+                                
+                                <div class="t1_1">This is a dummy paragrapgh this section. This is a dymmy content mobile-phone-icon-design-in-blue-circle-png</div>
+                            </div>
+                            <div class="t2">
+                                <img src="./Images/s2.jpg" alt="s2" width="50px" style="border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: 50px; margin-top: -40px;" >
+                                <p style="text-align: center; font-size: smaller;">Client Name <br>Profession</p>
+                                
+                                <div class="t2_2">This is a dummy paragrapgh this section. This is a dymmy content mobile-phone-icon-design-in-blue-circle-png</div>
+                            </div>
+                            <div class="t3">
+                                <img src="./Images/s3.png" alt="s3" width="50px" style="border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-left: 50px; margin-top: -40px;" >
+                                <p style="text-align: center; font-size: smaller;">Client Name <br>Profession</p>
+                                <div class="t3_3">This is a dummy paragrapgh this section. This is a dymmy content mobile-phone-icon-design-in-blue-circle-png</div>
+                            </div>
+                            <div class="tmain">
+                                <div class="ta"></div>
+                                <div class="tb"></div>
+                                <div class="tc"></div>
+                                <div class="td"></div>
+                            </div>
+                        <div class="container9">
+                           
+                             <div class="b1">
+                               <h3 style="color: #fff;">Quick Link</h3>
+                               <p style="color: #fff; cursor: pointer;">> About Us</p>
+                               <p style="color: #fff; cursor: pointer;">> Contacts</p>
+                               <p style="color: #fff; cursor: pointer;">> Privacy and Policy</p>
+                               <p style="color: #fff; cursor: pointer;">> Terms ans Conditions</p>
+                               <p style="color: #fff; cursor: pointer;">> FaQs and Help</p>
+
+                             </div>
+                             <div class="b2">
+                                <h3 style="color: #fff;">Contact</h3>
+                                <p style="color: #fff;"><img src="./Images/add.png" alt="add" width="20px"> 123 street USA</p>
+                               <p style="color: #fff;"><img src="./Images/mob.jpeg" alt="mob" width="20px"> 673536547</p>
+                               <p style="color: #fff;"><img src="./Images/mail.png" alt="mail" width="20px"> info@mail.com</p>
+                               <p style="color: #fff;"><img src="./Images/tw.png" alt="tw" width="20px" style="cursor: pointer;"> <img src="./Images/f.png" alt="f" width="20px" style="cursor: pointer;"> <img src="./Images/you.png" alt="you" width="20px" style="cursor: pointer;"> <img src="./Images/lin.png" alt="lin" width="20px" style="cursor: pointer;"></p>
+                               
+                               <p style="color: #fff;"></p>
+                             </div>
+                             <div class="b3">
+                                <h3 style="color: #fff; text-align: center; margin-top: 29px;">Gallery</h3>
+                                <p style="color: #fff;"><img src="./Images/ga.jpg" alt="ga" width="150px" height="auto"></p> 
+                                 
+                            </div>
+                             <div class="b4">
+                                <h3 style="color: #fff; text-align: center; margin-top: 29px;">News Letter</h3>
+                                <p style="color: #fff; text-align: center;" >This is sec-left_bottom-right <br>Msection dummy content for this block.</p> 
+                            
+                                <div class="search-container">
+                                    <input type="email" class="search-bar" placeholder="your email">
+                                    <button class="search-button" onclick="search()" style="color: #ffffff;">Sign Up</button>
+                                  </div>
+                                 </div>
+                             
+                          <p style="color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >&copy;Your site name all reserver designed by Html coder</p> 
+                             
+                        </div></div></div>
+                   </div>
+                 </div>
+                   </div>
+                </div>   
+             </div>
+             
+        </body>
+         
+ </html>
+        
+        
+        
